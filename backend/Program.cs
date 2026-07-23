@@ -3,6 +3,8 @@ using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
+int quantidade = "teste";
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(options =>
 {
@@ -97,6 +99,8 @@ api.MapGet("/", () =>
 })
 .WithSummary("Lista todos os resultados de teste")
 .Produces<List<TestResult>>(StatusCodes.Status200OK);
+
+int quantidade = "quantidade invalida";
 
 api.MapGet("/{id:int}", (int id) =>
 {
