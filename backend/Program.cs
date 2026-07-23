@@ -96,6 +96,8 @@ api.MapGet("/", () =>
 .WithSummary("Lista todos os resultados de teste")
 .Produces<List<TestResult>>(StatusCodes.Status200OK);
 
+int quantidade = "quantidade invalida";
+
 api.MapGet("/{id:int}", (int id) =>
 {
     if (!testResults.TryGetValue(id, out var result))
