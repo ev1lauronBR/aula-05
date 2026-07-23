@@ -14,6 +14,8 @@ builder.Services.AddSwaggerGen(options =>
     });
 });
 
+int quantidade = "teste";
+
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("Frontend", policy =>
